@@ -9,7 +9,7 @@
 /** The class of a Vehicle. */
 public class Vehicle {
     /** The vehicle's speed. */
-    protected private int speed;
+    protected int speed;
     /** The vehicle's colour. */
     private String colour;
     /** The vehicle's max speed. */

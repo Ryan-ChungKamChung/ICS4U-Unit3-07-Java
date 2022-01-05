@@ -21,28 +21,60 @@ final class Main {
     }
 
     /**
-     * Prints a formatted String output.
-     *
-     * @param vehicle Vehicle class
-     * */
-    public static void formatted(final Vehicle vehicle) {
-        System.out.println("\nLicense Plate: " + vehicle.getLicensePlate()
-                + "\nColour: " + vehicle.getColour()
-                + "\nNumber of Doors: " + vehicle.getNumOfDoors()
-                + "\nMax Speed: " + vehicle.getMaxSpeed()
-                + "\nCurrent Speed: " + vehicle.getSpeed());
+    * Formatted truck output.
+    *
+    * @param truck Truck object
+    */
+    public static void truckFormat(final Truck truck) {
+        System.out.printf("\nLicense Plate: %s\nMax Speed: %s\n",
+            truck.getLicensePlate(), truck.getMaxSpeed());
+        System.out.printf("\nSpeed: %s\nColour: %s\n",
+            truck.getSpeed(), truck.getColour());
     }
 
     /**
-     * Creates 2 vehicle classes and uses its getters, setters and methods.
+    * Formatted bike output.
+    *
+    * @param bike Bike object
+    */
+    public static void bikeFormat(final Bike bike) {
+        System.out.printf("\nColour: %s\nMax Speed: %s\n",
+            bike.getColour(), bike.getMaxSpeed());
+        System.out.printf("\nSpeed: %s\nCadence: %s\n",
+            bike.getSpeed(), bike.getCadence());
+    }
+
+    /**
+     * Creates 2 vehicle subclasses and uses its getters, setters and methods.
      *
      * @param args No args will be used.
      */
     public static void main(final String[] args) {
 
-        Bike bike = new Bike("red", 30);
-        Truck truck = new Truck("blue", 50, "A")
+        final Truck truck = new Truck("Red", 250, "ASDF123");
+        final Bike bike = new Bike("Blue", 75);
+        final int placeholder = 100;
+
+        truckFormat(truck);
+        System.out.println("Changing license plate...");
+        truck.setLicensePlate("ASDF111");
+        System.out.println("Changing Colour...");
+        truck.setColour("Black");
+        System.out.println("Accelerating...");
+        truck.accelerate(2);
+        System.out.println("Providing Air...");
+        truck.provideAir(2);
+        truckFormat(truck);
+
+        bikeFormat(bike);
+        System.out.println("Changing cadence...");
+        bike.setCadence(placeholder);
+        System.out.println("Changing speed...");
+        bike.accelerate(placeholder);
+        bike.ringBell();
+        bikeFormat(bike);
 
         System.out.println("\nDone.");
     }
 }
+

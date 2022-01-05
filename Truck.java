@@ -41,7 +41,7 @@ public class Truck extends Vehicle {
     *
     * @param newLicensePlate new license plate to set.
     */
-    public void setLicensePlate(String newLicensePlate) {
+    public void setLicensePlate(final String newLicensePlate) {
         this.licensePlate = newLicensePlate;
     }
 

@@ -26,9 +26,9 @@ final class Main {
     * @param truck Truck object
     */
     public static void truckFormat(final Truck truck) {
-        System.out.printf("\nLicense Plate: %s\nMax Speed: %s\n",
+        System.out.printf("\nLicense Plate: %s\nMax Speed: %s",
             truck.getLicensePlate(), truck.getMaxSpeed());
-        System.out.printf("\nSpeed: %s\nColour: %s\n",
+        System.out.printf("\nSpeed: %s\nColour: %s\n\n",
             truck.getSpeed(), truck.getColour());
     }
 
@@ -38,9 +38,9 @@ final class Main {
     * @param bike Bike object
     */
     public static void bikeFormat(final Bike bike) {
-        System.out.printf("\nColour: %s\nMax Speed: %s\n",
+        System.out.printf("\nColour: %s\nMax Speed: %s",
             bike.getColour(), bike.getMaxSpeed());
-        System.out.printf("\nSpeed: %s\nCadence: %s\n",
+        System.out.printf("\nSpeed: %s\nCadence: %s\n\n",
             bike.getSpeed(), bike.getCadence());
     }
 
